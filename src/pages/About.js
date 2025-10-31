@@ -7,19 +7,19 @@ const about = () => {
       content: "Functional Testing, Regression Testing, Smoke Testing, UAT",
     },
     {
-      title: "Automation (Selenium/Cypress)",
+      title: "Automation Testing",
       content: "Creating and maintaining automated test scripts for web applications using Selenium WebDriver and Cypress frameworks.",
     },
     {
-      title: "API Testing (Postman/RestAssured)",
+      title: "API Testing",
       content: "Designing and executing test cases for RESTful APIs using Postman and RestAssured to ensure functionality, reliability, performance, and security.",
     },
     {
-      title: "Documentation & Reporting",
+      title: "Documentation",
       content: "Creating detailed test plans, test cases, and bug reports using tools like Excel and JIRA to ensure clear communication and tracking of testing activities.",
     },
     {
-      title: "Version Control (Git/GitHub)",
+      title: "Version Control",
       content: "Using Git for version control and collaborating on code repositories hosted on GitHub.",
     },
   ];
@@ -64,13 +64,8 @@ const about = () => {
           <div key={index} className="skill-card">
             {/* 1. Konten yang Selalu Terlihat (Hanya Title) */}
             <h4 className="skill-title-visible">{skill.title}</h4>
+            <div className="skill-overlay"> 
 
-            {/* 2. Overlay yang akan muncul saat hover */}
-            <div className="skill-overlay">
-              {/* Judul di dalam overlay */}
-              <h4 className="overlay-title">{skill.title}</h4>
-
-              {/* Konten/Deskripsi yang akan muncul */}
               <p className="overlay-text">{skill.content}</p>
             </div>
           </div>

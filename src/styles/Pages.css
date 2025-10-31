@@ -454,3 +454,17 @@
     font-style: italic;
     color: #666;
 }
+
+.social-links {
+    margin-top: 15px;
+    display: flex;
+    gap: 15px;
+}
+.social-links a {
+    color: #555;
+    font-size: 30px;
+    transition: color 0.2s;
+}
+.social-links a:hover {
+    color: #007bff;
+}

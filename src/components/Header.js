@@ -4,6 +4,11 @@ import React from 'react';
 // Komponen menerima props: currentPage (state saat ini) dan handlePageChange (fungsi pengubah state)
 const Header = ({ currentPage, handlePageChange }) => {
   const navItems = ["About", "Resume", "Portfolio","Certifications", "Contact"];
+  const socialLinks = [
+    { name: "GitHub", url: "https://github.com/Panji824", iconClass: "fab fa-github" },
+    { name: "LinkedIn", url: "www.linkedin.com/in/panji-wirya-pastika", iconClass: "fab fa-linkedin" },
+    { name: "instagram", url: "https://www.instagram.com/pan__wirya/", iconClass: "fab fa-instagram" },
+  ];
 
   // handleNavClick sekarang hanya memanggil fungsi prop yang diberikan oleh App.js
   const handleNavClick = (item) => {
@@ -32,6 +37,19 @@ const Header = ({ currentPage, handlePageChange }) => {
           ))}
         </ul>
       </nav>
+      <div className="social-links">
+        {socialLinks.map((link) => (
+          <a 
+            key={link.name} 
+            href={link.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={link.name}
+          > 
+            <i className={link.iconClass}> </i>
+          </a>
+        ))}
+      </div>
       
 
     </header>
