@@ -1,6 +1,100 @@
 /* src/styles/Layout.css */
 
 /* --- Struktur Aplikasi Utama --- */
+/* ================================================= */
+/* ATURAN RESPONSIVE: Mengubah Sidebar menjadi Navbar Atas */
+/* ================================================= */
+
+/* ATURAN 1 & 2: Tablet dan Layar Menengah (Max 1024px) */
+@media (max-width: 1024px) {
+    /* Mengurangi padding konten agar lebih lega */
+    .content-area {
+        padding: 40px 30px;
+    }
+}
+
+/* ATURAN 3: Layar Kecil / Smartphone (Max 768px) */
+@media (max-width: 768px) {
+    /* 1. Mengubah Tata Letak Utama (App Container) */
+    .app-container {
+        /* Mengubah dari tampilan samping (flex) menjadi tampilan tumpuk (column) */
+        flex-direction: column; 
+        min-height: auto; /* Hapus min-height agar tidak terlalu tinggi */
+    }
+
+    /* 2. Mengubah Sidebar menjadi Navbar */
+    .header-sidebar {
+        width: 100%; /* Sidebar mengambil lebar penuh */
+        height: auto; /* Tingginya disesuaikan dengan isi */
+        position: relative; /* Hapus sticky */
+        border-right: none;
+        border-bottom: 1px solid #e0e0e0; /* Tambahkan garis pemisah horizontal */
+        padding: 20px;
+    }
+
+    /* Memastikan Profile Info tetap di atas Navbar */
+    .profile-info {
+        border-bottom: none; /* Hapus garis pemisah lama */
+        padding-bottom: 0;
+        margin-bottom: 15px; /* Kurangi jarak bawah */
+    }
+
+    /* 3. Menata Navigasi (Menu) */
+    .main-nav {
+        /* Navbar menjadi horizontal dan di bawah profil */
+        margin: 0;
+        flex-grow: 0;
+        
+    }
+
+    .main-nav ul {
+        /* Mengatur menu menjadi gulir horizontal */
+        display: flex;
+        overflow-x: auto; /* Memungkinkan gulir jika menu terlalu panjang */
+        padding-bottom: 10px; /* Jarak untuk scrollbar atau ke bawah */
+    }
+
+    .main-nav li {
+        /* Item menu berjejer secara horizontal */
+        flex-shrink: 0; /* Penting: mencegah item mengecil */
+        padding: 8px 15px;
+        margin-right: 8px; /* Jarak antar item menu */
+    }
+
+    /* 4. Menata Social Links */
+    .social-links {
+        margin-top: 15px;
+        justify-content: center; /* Pusatkan tautan sosial */
+    }
+
+    /* 5. Menata Footer Sidebar */
+    .sidebar-footer {
+        padding-top: 10px;
+    }
+
+    /* Konten Utama harus menyesuaikan padding */
+    .content-area {
+        padding: 30px 20px; /* Kurangi padding untuk layar kecil */
+        max-width: 100%; /* Hapus batas lebar agar konten memakan ruang penuh */
+    }
+}
+
+/* ATURAN 4: Layar Sangat Kecil (Max 500px) */
+@media (max-width: 500px) {
+    /* Memusatkan semua teks di sidebar agar terlihat rapi */
+    .profile-info {
+        text-align: center;
+    }
+    
+    /* Navigasi tetap bisa digulir, tapi jaraknya dikurangi lagi */
+    .main-nav li {
+        padding: 6px 10px;
+        font-size: 14px;
+    }
+}
+
+
+
 .app-container {
     display: flex; 
     min-height: 100vh;
