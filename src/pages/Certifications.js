@@ -3,6 +3,24 @@ import React from 'react';
 const certificationData = [
   {
     id: 1,
+    title: 'QA Test Activity',
+    provider: 'MySkill',
+    year: '2025',
+    credentialId: 'MS-3/10/2025-8mJbWudZ0beqKIfYpGO',
+    description: 'A comprehensive QA testing program covering bug advocacy, test planning, test case development, and defect management using qase.io platform.',
+    skills: ['bug advocate', 'test planning', 'test scenario & test case', 'defect management with qase.io']
+  },
+  {
+    id: 2,
+    title: 'Basic QA Automation',
+    provider: 'MySkill',
+    year: '2025',
+    credentialId: 'MS-3/10/2025-OMjs24kkFkBbdqgTecii',
+    description: 'An introductory course on QA automation focusing on automated testing principles, tools, and frameworks to enhance testing efficiency and effectiveness.',
+    skills: ['qa automation', 'automated testing principles', 'git collaboration', 'Java', 'Python', 'Javascript' ]
+  },
+  {
+    id: 3,
     title: 'Mikrotik Certified Network Associate (MTCNA)',
     provider: 'Mikrotik',
     year: '2024',
@@ -11,7 +29,7 @@ const certificationData = [
     skills: ['Networking', 'Mikrotik', 'Routing', 'Firewall']
   },
   {
-    id: 2,
+    id: 4,
     title: 'Tensorflow Developer Certificate',
     provider: 'TensorFlow',
     year: '2023',
@@ -20,7 +38,7 @@ const certificationData = [
     skills: ['TensorFlow', 'Machine Learning', 'Neural Networks', 'Python']
   },
   {
-    id: 3,
+    id: 5,
     title: 'Machine Learning Specialization',
     provider: 'DeepLearning.AI (Coursera)',
     year: '2023',
@@ -29,7 +47,7 @@ const certificationData = [
     skills: ['Machine Learning', 'Python', 'Model Development', 'Data Analysis']
   },
     {
-    id: 4,
+    id: 6,
     title: 'Introduction to Git and GitHub',
     provider: 'Coursera',
     year: '2023',
@@ -37,6 +55,8 @@ const certificationData = [
     description: 'Completed a course on version control using Git and GitHub, learning essential skills for collaborative software development and code management.',
     skills: ['Git', 'GitHub', 'Version Control', 'Collaboration']
   }
+
+
 ];
 // ------------------------------------
 
