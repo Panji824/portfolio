@@ -1,13 +1,12 @@
-// src/App.js
-import React, { useState } from "react";
-import Header from "./components/Header"; // JALUR DIPERBAIKI
-import About from "./pages/About"; // JALUR DIPERBAIKI
-import Portfolio from "./pages/Portfolio"; // JALUR DIPERBAIKI
-import Resume from "./pages/Resume"; // JALUR DIPERBAIKI
-import Contact from "./pages/Contact"; // JALUR DIPERBAIKI
-import Certification from "./pages/Certifications"; // JALUR DIPERBAIKI
+import React, { useState, useEffect } from "react";
+import Header from "./components/Header";
+import About from "./pages/About";
+import Portfolio from "./pages/Portfolio";
+import Resume from "./pages/Resume";
+import Contact from "./pages/Contact";
+import Certification from "./pages/Certifications";
+import ScrollVelocity from './pages/ScrollVelocity';
 
-// Komponen 'placeholder' untuk halaman yang belum dibuat isinya
 const DefaultPage = ({ pageName }) => (
   <section className="page-section">
     <h2>{pageName}</h2>
@@ -15,22 +14,38 @@ const DefaultPage = ({ pageName }) => (
   </section>
 );
 
-function App() {
-  // 1. Menggunakan state untuk menentukan halaman mana yang aktif
-  const [currentPage, setCurrentPage] = useState("About");
+const INTRO_DURATION = 3000;
+const FADE_DURATION = 1000;
 
-  // 2. Fungsi untuk berpindah halaman, diteruskan ke Header
+function App() {
+  const [currentPage, setCurrentPage] = useState("About");
+  const [isIntroVisible, setIsIntroVisible] = useState(true);
+  const [introOpacity, setIntroOpacity] = useState(1);
+
+  useEffect(() => {
+    const timerIntro = setTimeout(() => {
+      setIntroOpacity(0);
+      
+      const timerFade = setTimeout(() => {
+        setIsIntroVisible(false);
+      }, FADE_DURATION);
+
+      return () => clearTimeout(timerFade);
+
+    }, INTRO_DURATION);
+
+    return () => clearTimeout(timerIntro);
+  }, []);
+
   const handlePageChange = (page) => {
     setCurrentPage(page);
   };
 
-  // 3. Fungsi untuk merender komponen halaman yang sesuai
   const renderPage = () => {
     switch (currentPage) {
       case "About":
         return <About />;
       case "Resume":
-        // Asumsi Anda sudah membuat komponen Resume.js
         return <Resume />;
       case "Portfolio":
         return <Portfolio />;
@@ -43,26 +58,44 @@ function App() {
     }
   };
 
+  if (isIntroVisible) {
+    return (
+      <div 
+        style={{
+          position: 'fixed',
+          top: 0,
+          left: 0,
+          width: '100vw',
+          height: '100vh',
+          backgroundColor: '#556B2F',
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          zIndex: 9999,
+          opacity: introOpacity,
+          transition: `opacity ${FADE_DURATION}ms ease-out`,
+        }}
+      >
+        <ScrollVelocity 
+          texts={[ 'TestNG','Jira','Selenium','Postman','Git']} 
+          velocity={50}
+          className="custom-scroll-text"
+        />
+      </div>
+    );
+  }
+
   return (
-    <div className="app-container" style={{ display: 'flex', minHeight: '100vh', backgroundColor: '#fff' }}> 
-      
-      {/* Header/Sidebar: Beri lebar agar terlihat */}
+    <div className="app-container"> 
       <Header 
         currentPage={currentPage} 
         handlePageChange={handlePageChange} 
-        style={{ width: '250px', backgroundColor: '#333', color: 'white', padding: '20px' }} 
       />
-
-      {/* Konten Utama: Beri padding agar tulisan tidak menempel */}
-      <main className="content-area" style={{ flexGrow: 1, padding: '40px' }}> 
+      <main className="content-area"> 
         {renderPage()}
       </main>
-      
-      {/* Footer diletakkan di luar flex container atau disesuaikan */}
-      {/* Untuk saat ini, kita hilangkan Footer dari tampilan utama agar tidak mengganggu tata letak flex sementara */}
-      {/* <Footer /> */} 
     </div>
-    );
+  );
 }
 
 export default App;

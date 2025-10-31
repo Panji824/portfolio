@@ -1,4 +1,3 @@
-/* ========== Global Layout ========== */
 .app-container {
   display: flex;
   min-height: 100vh;
@@ -6,8 +5,8 @@
 
 /* ========== Sidebar (Desktop) ========== */
 .header-sidebar {
-  background-color: #fff;
-  border-right: 1px solid #e0e0e0;
+  background-color: #EEEEEE; /* PUTIH -> #EEEEEE */
+  border-right: 1px solid #CBCBCB; /* Abu-abu terang -> #CBCBCB */
   padding: 30px 20px;
   display: flex;
   flex-direction: column;
@@ -15,21 +14,21 @@
   position: sticky;
   top: 0;
   height: 100vh;
-    width: 20%;
+  width: 20%;
 }
 
 /* Profile */
 .profile-info {
   text-align: center;
-  border-bottom: 2px solid #a9a9a9ff;
+  border-bottom: 2px solid #B7B89F; /* Abu-abu gelap/hitam -> #B7B89F */
   padding-bottom: 30px;
   margin-bottom: 30px;
 }
 .avatar {
   width: 100px;
   height: 100px;
-  background-color: #1a1a1a;
-  color: white;
+  background-color: #777C6D; /* HITAM -> #777C6D */
+  color: #EEEEEE; /* putih -> #EEEEEE */
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -45,7 +44,7 @@
 .main-nav ul {
   list-style: none;
   padding: 0;
-  border-bottom: 2px solid #a9a9a9ff;
+  border-bottom: 2px solid #B7B89F; /* Abu-abu gelap/hitam -> #B7B89F */
   padding-bottom: 30px;
   margin-bottom: 30px;
 }
@@ -54,18 +53,18 @@
   cursor: pointer;
   margin-bottom: 5px;
   font-weight: 500;
-  color: #555;
+  color: #777C6D; /* Abu-abu gelap -> #777C6D */
   transition: background-color 0.2s;
   border-radius: 4px;
   font-size: 20px;
 }
 .main-nav li.activeLink {
-  background-color: #1a1a1a;
-  color: white;
+  background-color: #777C6D; /* HITAM -> #777C6D */
+  color: #EEEEEE; /* putih -> #EEEEEE */
   font-weight: bold;
 }
 .main-nav li:hover:not(.activeLink) {
-  background-color: #eeeeee;
+  background-color: #CBCBCB; /* Abu-abu terang -> #CBCBCB */
 }
 
 /* Social links */
@@ -79,15 +78,18 @@
 /* Content area */
 .content-area {
   flex-grow: 1;
-  padding: 60px 80px;
+  padding: 40px 80px;
+  padding-bottom: 60px;
+  padding-top: 100px;
   max-width: 80%;
+  background-color: #EEEEEE; /* Latar belakang area konten (jika tidak ada body/html background) */
 }
 .main-footer {
   width: 100%;
   text-align: center;
   padding: 10px 0;
   font-size: 12px;
-  color: #888;
+  color: #B7B89F; /* Abu-abu -> #B7B89F */
   margin-top: 40px;
 }
 
@@ -111,7 +113,7 @@
     height: auto;
     position: relative;
     border-right: none;
-    border-bottom: 1px solid #e0e0e0;
+    border-bottom: 1px solid #CBCBCB; /* Abu-abu terang -> #CBCBCB */
     padding: 20px;
     flex-grow: 0;
   }
