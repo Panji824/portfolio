@@ -33,18 +33,7 @@ const Header = ({ currentPage, handlePageChange }) => {
         </ul>
       </nav>
       
-      <div className="social-links">
-        {/* Pastikan href memiliki https:// atau http:// agar berfungsi sebagai link luar */}
-        <a href="https://github.com/panjiwp" target="_blank" rel="noopener noreferrer">
-          github
-        </a>
-        <a href="https://linkedin.com/in/panjiwp" target="_blank" rel="noopener noreferrer">
-          linkedin
-        </a>
-        <a href="https://instagram.com/panjiwp" target="_blank" rel="noopener noreferrer">
-          instagram
-        </a>
-      </div>
+
     </header>
   );
 };

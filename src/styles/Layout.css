@@ -1,198 +1,156 @@
-/* src/styles/Layout.css */
-
-/* --- Struktur Aplikasi Utama --- */
-/* ================================================= */
-/* ATURAN RESPONSIVE: Mengubah Sidebar menjadi Navbar Atas */
-/* ================================================= */
-
-/* ATURAN 1 & 2: Tablet dan Layar Menengah (Max 1024px) */
-@media (max-width: 1024px) {
-    /* Mengurangi padding konten agar lebih lega */
-    .content-area {
-        padding: 40px 30px;
-    }
-}
-
-/* ATURAN 3: Layar Kecil / Smartphone (Max 768px) */
-@media (max-width: 768px) {
-    /* 1. Mengubah Tata Letak Utama (App Container) */
-    .app-container {
-        /* Mengubah dari tampilan samping (flex) menjadi tampilan tumpuk (column) */
-        flex-direction: column; 
-        min-height: auto; /* Hapus min-height agar tidak terlalu tinggi */
-    }
-
-    /* 2. Mengubah Sidebar menjadi Navbar */
-    .header-sidebar {
-        width: 100%; /* Sidebar mengambil lebar penuh */
-        height: auto; /* Tingginya disesuaikan dengan isi */
-        position: relative; /* Hapus sticky */
-        border-right: none;
-        border-bottom: 1px solid #e0e0e0; /* Tambahkan garis pemisah horizontal */
-        padding: 20px;
-    }
-
-    /* Memastikan Profile Info tetap di atas Navbar */
-    .profile-info {
-        border-bottom: none; /* Hapus garis pemisah lama */
-        padding-bottom: 0;
-        margin-bottom: 15px; /* Kurangi jarak bawah */
-    }
-
-    /* 3. Menata Navigasi (Menu) */
-    .main-nav {
-        /* Navbar menjadi horizontal dan di bawah profil */
-        margin: 0;
-        flex-grow: 0;
-        
-    }
-
-    .main-nav ul {
-        /* Mengatur menu menjadi gulir horizontal */
-        display: flex;
-        overflow-x: auto; /* Memungkinkan gulir jika menu terlalu panjang */
-        padding-bottom: 10px; /* Jarak untuk scrollbar atau ke bawah */
-    }
-
-    .main-nav li {
-        /* Item menu berjejer secara horizontal */
-        flex-shrink: 0; /* Penting: mencegah item mengecil */
-        padding: 8px 15px;
-        margin-right: 8px; /* Jarak antar item menu */
-    }
-
-    /* 4. Menata Social Links */
-    .social-links {
-        margin-top: 15px;
-        justify-content: center; /* Pusatkan tautan sosial */
-    }
-
-    /* 5. Menata Footer Sidebar */
-    .sidebar-footer {
-        padding-top: 10px;
-    }
-
-    /* Konten Utama harus menyesuaikan padding */
-    .content-area {
-        padding: 30px 20px; /* Kurangi padding untuk layar kecil */
-        max-width: 100%; /* Hapus batas lebar agar konten memakan ruang penuh */
-    }
-}
-
-/* ATURAN 4: Layar Sangat Kecil (Max 500px) */
-@media (max-width: 500px) {
-    /* Memusatkan semua teks di sidebar agar terlihat rapi */
-    .profile-info {
-        text-align: center;
-    }
-    
-    /* Navigasi tetap bisa digulir, tapi jaraknya dikurangi lagi */
-    .main-nav li {
-        padding: 6px 10px;
-        font-size: 14px;
-    }
-}
-
-
-
+/* ========== Global Layout ========== */
 .app-container {
-    display: flex; 
-    min-height: 100vh;
+  display: flex;
+  min-height: 100vh;
 }
 
-/* --- Sidebar (Header) --- */
+/* ========== Sidebar (Desktop) ========== */
 .header-sidebar {
-    width: 350px; 
-    background-color: #ffffff; 
-    border-right: 1px solid #e0e0e0; 
-    padding: 30px 20px;
+  background-color: #fff;
+  border-right: 1px solid #e0e0e0;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+}
+
+/* Profile */
+.profile-info {
+  text-align: center;
+  border-bottom: 2px solid #a9a9a9ff;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+}
+.avatar {
+  width: 100px;
+  height: 100px;
+  background-color: #1a1a1a;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  margin: 0 auto 10px auto;
+}
+
+/* Navigation */
+.main-nav {
+  width: 100%;
+}
+.main-nav ul {
+  list-style: none;
+  padding: 0;
+  border-bottom: 2px solid #a9a9a9ff;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+}
+.main-nav li {
+  padding: 12px 20px;
+  cursor: pointer;
+  margin-bottom: 5px;
+  font-weight: 500;
+  color: #555;
+  transition: background-color 0.2s;
+  border-radius: 4px;
+  font-size: 20px;
+}
+.main-nav li.activeLink {
+  background-color: #1a1a1a;
+  color: white;
+  font-weight: bold;
+}
+.main-nav li:hover:not(.activeLink) {
+  background-color: #eeeeee;
+}
+
+/* Social links */
+.social-links {
+  display: flex;
+  gap: 15px;
+  font-size: 20px;
+  margin-top: 30px;
+}
+
+/* Content area */
+.content-area {
+  flex-grow: 1;
+  padding: 60px 80px;
+  max-width: 1400px;
+}
+.main-footer {
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 12px;
+  color: #888;
+  margin-top: 40px;
+}
+
+/* ========== Tablet Adjustment ========== */
+@media (max-width: 1024px) {
+  .content-area {
+    padding: 40px 30px;
+  }
+}
+
+/* ========== Mobile Layout ========== */
+@media (max-width: 700px) {
+  .app-container {
+    flex-direction: column;
+    min-height: auto;
+    width: 100%;
+  }
+
+  .header-sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+    border-right: none;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 20px;
+    flex-grow: 0;
+  }
+
+  .profile-info {
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: sticky;
-    top: 0;
-    height: 100vh;
-    justify-content: space-between;
-}
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 15px;
+  }
+  .avatar {
+    width: 40px;
+    height: 40px;
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  .profile-name {
+    font-size: 18px;
+  }
+  .profile-info p {
+    font-size: 13px;
+  }
 
-.profile-info {
-    text-align: center;
-    margin-bottom: 40px;
-    border-bottom: 2px solid #a9a9a9ff; 
-    padding-bottom: 30px;
-    margin-bottom: 30px; 
-}
-
-.avatar {
-    width: 100px;
-    height: 100px;
-    background-color: #1a1a1a;
-    color: white;
-    border-radius: 50%;
+  .main-nav ul {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 30px;
-    margin: 0 auto 10px auto;
-}
-
-/* --- Navigasi --- */
-.main-nav {
-    width: 100%;
-    margin-bottom: auto; /* Mendorong social-links ke bawah */
-}
-
-.main-nav ul {
-    list-style: none;
+    overflow-x: auto;
+    border-bottom: none;
     padding: 0;
-    border-bottom: 2px solid #a9a9a9ff; 
-    padding-bottom: 30px;
-    margin-bottom: 30px; 
-}
+    margin-bottom: 15px;
+  }
+  .main-nav li {
+    flex-shrink: 0;
+    white-space: nowrap;
+    margin-right: 10px;
+  }
 
-.main-nav li {
-    padding: 12px 20px;
-    cursor: pointer;
-    margin-bottom: 5px;
-    font-weight: 500;
-    color: #555;
-    transition: background-color 0.2s;
-    border-radius: 4px;
-    font-size: 20px;
-}
-
-/* Kelas aktif dari Header.js */
-.main-nav li.activeLink { 
-    background-color: #1a1a1a; /* Latar belakang item aktif */
-    color: white;
-    font-weight: bold;
-}
-
-.main-nav li:hover:not(.activeLink) {
-    background-color: #eeeeee;
-}
-
-/* --- Social Links --- */
-.social-links {
-    display: flex;
-    gap: 15px;
-    font-size: 20px;
-    margin-top: 30px;
-}
-
-/* --- Konten Utama --- */
-.content-area {
-    flex-grow: 1; /* Mengambil sisa ruang horizontal */
-    padding: 60px 80px;
-    max-width: 1400px; /* Batasi lebar konten agar tidak terlalu lebar di monitor besar */
-}
-
-/* --- Footer (Global) --- */
-.main-footer {
-    /* Jika footer berada di luar app-container atau di bawah konten */
-    width: 100%;
-    text-align: center;
-    padding: 10px 0;
-    font-size: 12px;
-    color: #888;
+  .content-area {
+    padding: 30px 20px;
+    max-width: 100%;
+  }
 }

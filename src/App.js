@@ -1,8 +1,6 @@
 // src/App.js
 import React, { useState } from "react";
 import Header from "./components/Header"; // JALUR DIPERBAIKI
-import Footer from "./components/Footer"; // JALUR DIPERBAIKI
-// Import semua halaman
 import About from "./pages/About"; // JALUR DIPERBAIKI
 import Portfolio from "./pages/Portfolio"; // JALUR DIPERBAIKI
 import Resume from "./pages/Resume"; // JALUR DIPERBAIKI
