@@ -6,7 +6,7 @@ const Header = ({ currentPage, handlePageChange }) => {
   const navItems = ["About", "Resume", "Portfolio","Certifications", "Contact"];
   const socialLinks = [
     { name: "GitHub", url: "https://github.com/Panji824", iconClass: "fab fa-github" },
-    { name: "LinkedIn", url: "www.linkedin.com/in/panji-wirya-pastika", iconClass: "fab fa-linkedin" },
+    { name: "LinkedIn", url: "https://linkedin.com/in/panji-wirya-pastika", iconClass: "fab fa-linkedin" },
     { name: "instagram", url: "https://www.instagram.com/pan__wirya/", iconClass: "fab fa-instagram" },
   ];
 
