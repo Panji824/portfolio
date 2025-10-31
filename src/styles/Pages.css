@@ -362,11 +362,17 @@
     font-weight: 500;
 }
 
-.contact-container {
-    display: grid;
+.contact-container { 
+    display: grid; 
     grid-template-columns: 2fr 1fr; 
-    gap: 40px;
-    margin-top: 30px;
+    gap: 40px; 
+    margin-top: 30px; 
+}
+
+@media (max-width: 500px) {
+  .contact-container {
+    display: block;
+  }
 }
 
 .contact-form {
