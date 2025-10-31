@@ -1,0 +1,24 @@
+/* src/index.css */
+
+/* CSS Reset Sederhana */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Pastikan HTML dan Root memiliki tinggi penuh */
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+}
+
+/* Terapkan font dasar */
+body {
+  font-family: Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f0f0f0; /* Warna latar belakang agar terlihat ada konten */
+}
