@@ -63,7 +63,7 @@ const certificationData = [
 const Certifications = () => {
   return (
     <section className="certifications-section">
-      <h2>Certifications</h2>
+      <h2>Certificates</h2>
       <p>A list of professional certifications and specialization programs I have successfully completed to enhance my expertise.</p>
 
       <div className="certifications-grid">
@@ -71,8 +71,8 @@ const Certifications = () => {
           <div key={cert.id} className="cert-card">
             
             {/* Bagian Icon/Gambar Sertifikat */}
-            <div className="cert-icon-placeholder">
-              📜
+            <div className="cert-icon">
+              <i className="fas fa-certificate fa-3x"></i>
             </div>
 
             <div className="cert-details">

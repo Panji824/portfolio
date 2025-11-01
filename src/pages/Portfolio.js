@@ -29,7 +29,7 @@ const Portfolio = () => {
       <div className="project-grid">
         {projects.map((project) => (
           <div key={project.id} className="project-card">
-            {/* Gambar proyek akan diletakkan di sini */}
+            
             <h3>{project.title}</h3>
             <p>{project.description}</p>
             <div className="tech-tags">

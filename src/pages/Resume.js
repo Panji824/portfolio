@@ -87,7 +87,7 @@ const Resume = () => {
           </div>
         ))}
       </div>
-        <div className="education-container">
+        <div className="organization-container">
             <h3>Organization</h3>
             {organizations.map((org, index) => (
             <div key={index} className="edu-entry">
