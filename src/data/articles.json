@@ -1,0 +1,99 @@
+[
+
+  {
+    "id": 2,
+    "title": "my Robot assistant OpenAI with raspberry pi and esp for cute face robot :3",
+    "date": "2024-05-20",
+    "summary": "Building a cute robot assistant using OpenAI, Raspberry Pi, and ESP modules.",
+    "slug": "my-robot-assistant-with-openai-with-raspberry-pi-and-esp-for-cute-face-robot",
+    "tag": ["openai", "raspberry pi", "robotics", "embedded systems", "iot"],
+    "contentPart1": "This project integrates the high-level processing of the Raspberry Pi for interacting with the OpenAI API, allowing the robot to understand complex voice commands and generate natural responses.",
+    "contentPart2": "The ESP module acts as the microcontroller for the physical parts, managing the servo motors for expressive 'cute face' movements and handling low-latency tasks.",
+    "imagePart1": "/images/articles/robot-pi.jpg",
+    "imagePart2": "/images/articles/robot-esp-face.jpg"
+  },
+  {
+    "id": 3,
+    "title": "Basic Restful API with Django",
+    "date": "2024-06-01",
+    "summary": "Learn how to create a basic RESTful API using Django and Django REST framework.",
+    "slug": "basic-restful-api-with-django",
+    "tag": ["django", "python", "web development"],
+    "contentPart1": "Django REST Framework (DRF) simplifies API development greatly. The essential steps involve defining models, creating serializers to convert model instances to JSON format, and setting up viewsets or function-based views to handle HTTP requests (GET, POST, PUT, DELETE).",
+    "contentPart2": "Authentication and permission classes are crucial for securing your endpoints, ensuring only authorized users can access sensitive data or perform destructive actions.",
+    "imagePart1": "/images/articles/django-api-structure.jpg",
+    "imagePart2": null
+  },
+  {
+    "id": 4,
+    "title": "how do start project with react js? why it is so popular among developers?",
+    "date": "2024-06-02",
+    "summary": "A beginner's guide to starting a project with React.js and understanding its popularity.",
+    "slug": "how-do-start-project-with-react-js-why-it-is-so-popular-among-developers",
+    "tag": ["react", "javascript", "web development"],
+    "contentPart1": "React's popularity stems from its component-based architecture and the Virtual DOM, which provides efficient rendering and predictable state management. Starting a project usually involves 'create-react-app' or tools like Vite/Next.js.",
+    "contentPart2": "The component structure encourages modularity, making large codebases easier to maintain and scale across development teams.",
+    "imagePart1": null,
+    "imagePart2": null
+  },
+  {
+    "id": 5,
+    "title": "i learn embedded system, web and mobile development, cloud configuration, machine learning but why do i choose software testing?",
+    "date": "2024-06-09",
+    "summary": "A personal reflection on why I chose a career in software testing despite my background in other tech fields.",
+    "slug": "i-learn-embedded-system-web-and-mobile-development-cloud-configuration-machine-learning-but-why-do-i-choose-software-testing",
+    "tag": ["career choice", "quality assurance", "software testing"],
+    "contentPart1": "My diverse background provided a unique perspective: knowing how systems are built across different domains (embedded, cloud, web) enhances my ability to find complex failure points and design comprehensive test strategies.",
+    "contentPart2": "Software testing, especially QA, is the intersection of analytical thinking, quality advocacy, and technical expertise—a perfect fit for leveraging my multidisciplinary skills.",
+    "imagePart1": null,
+    "imagePart2": null
+  },
+  {
+    "id": 6,
+    "title": "what is software testing? and why is it important?",
+    "date": "2024-06-06",
+    "summary": "An introduction to software testing and its significance in the software development lifecycle.",
+    "slug": "what-is-software-testing-and-why-is-it-important",
+    "tag": ["software testing", "quality assurance", "sdlc"],
+    "contentPart1": "Software testing is the process of evaluating a software product to determine if it meets the specified requirements and to identify defects. It’s crucial for minimizing risk, saving costs, and ensuring user satisfaction.",
+    "contentPart2": "The importance lies in delivering a reliable, high-quality product. Failing to test properly can lead to disastrous consequences, from financial loss to reputational damage.",
+    "imagePart1": "/images/articles/testing-cycle.jpg",
+    "imagePart2": null
+  },
+  {
+    "id": 16,
+    "title": "what is API testing?",
+    "date": "2024-06-03",
+    "summary": "An introduction to API testing and its role in ensuring software quality.",
+    "slug": "what-is-api-testing",
+    "tag": ["api testing", "software testing", "quality assurance"],
+    "contentPart1": "API (Application Programming Interface) testing involves testing business logic and data layer directly without a UI. It is highly efficient for finding core functionality and security flaws early.",
+    "contentPart2": "Unlike UI testing, API testing ensures the underlying services are robust and secure, regardless of how the frontend is built.",
+    "imagePart1": "/images/articles/api-flow.jpg",
+    "imagePart2": null
+  },
+  {
+    "id": 17,
+    "title": "how to use postman for API testing?",
+    "date": "2024-06-04",
+    "summary": "A beginner's guide to using Postman for effective API testing.",
+    "slug": "how-to-use-postman-for-api-testing",
+    "tag": ["api testing", "postman", "software testing"],
+    "contentPart1": "Postman is an indispensable tool for API testing. It allows you to quickly create requests (GET, POST, etc.), organize them into collections, and test response validations using built-in assertion scripts (tests).",
+    "contentPart2": "The key feature is using environment variables to manage different endpoints (dev, staging, prod) without changing the core request structure.",
+    "imagePart1": "/images/articles/postman-interface.jpg",
+    "imagePart2": null
+  },
+  {
+    "id": 18,
+    "title": "how do i automated my API testing using postman and newman?",
+    "date": "2024-06-05",
+    "summary": "A guide on automating API testing using Postman and Newman for efficient testing workflows.",
+    "slug": "how-do-i-automated-my-api-testing-using-postman-and-newman",
+    "tag": ["api testing", "postman", "automation"],
+    "contentPart1": "Newman is a command-line collection runner for Postman. By exporting your Postman collection, Newman can run your entire test suite from the terminal, making it perfect for integration into CI/CD pipelines.",
+    "contentPart2": "Automation allows continuous validation of the API layer after every code commit, drastically improving the speed and reliability of the development cycle.",
+    "imagePart1": "/images/articles/newman-ci.jpg",
+    "imagePart2": null
+  }
+]

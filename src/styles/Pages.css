@@ -531,3 +531,276 @@
 .social-links a:hover {
     color: #007bff;
 }
+
+
+/* src/styles/Pages.css - Tambahan untuk Halaman Articles */
+
+/* ==================================== */
+/* Halaman ARTICLES (ArticlesPage.js)   */
+/* ==================================== */
+
+.articles-page {
+    /* Pastikan padding halaman sudah diatur oleh .content-area */
+    padding-top: 20px;
+}
+
+.page-header h1 {
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.page-header p {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+/* --- Daftar Artikel (List) --- */
+.article-list {
+    display: grid;
+    /* Menggunakan grid 1 kolom untuk daftar vertikal */
+    grid-template-columns: 1fr; 
+    gap: 20px; /* Jarak vertikal antar kartu */
+}
+
+.article-card {
+    background-color: #ffffff;
+    border: 1px solid #CBCBCB; /* Border sesuai tema terang */
+    border-radius: 8px;
+    padding: 25px 30px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.article-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Konten Artikel --- */
+.article-title {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #777C6D; /* Warna teks utama sesuai tema gelap Anda */
+    transition: color 0.2s;
+}
+
+.article-title:hover {
+    color: #B7B89F; /* Warna hover sesuai tema kedua Anda */
+    text-decoration: underline;
+}
+
+.article-summary {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+/* --- Metadata (Tanggal dan Tags) --- */
+.article-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+    border-top: 1px dashed #eee;
+}
+
+.article-date {
+    font-size: 0.9rem;
+    color: #888;
+}
+
+.article-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tag-pill {
+    display: inline-block;
+    background-color: #E6E7E0; /* Latar belakang tag yang lebih netral/terang */
+    color: #777C6D;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-transform: lowercase;
+}
+
+.tag-pill:hover {
+    background-color: #B7B89F;
+    color: white;
+}
+
+
+/* --- Responsive Mobile --- */
+@media (max-width: 600px) {
+    .page-header h1 {
+        font-size: 32px;
+    }
+    .article-title {
+        font-size: 1.2rem;
+    }
+    .article-meta {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+}
+
+/* ==================================== */
+/* Halaman ARTWORK (Artwork.js)         */
+/* ==================================== */
+
+.artwork-section h2 {
+    font-size: 42px;
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+/* --- Container Grid Utama --- */
+.artwork-grid {
+    display: grid;
+    /* Default: 3 Kolom */
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 30px; 
+    margin-top: 20px;
+}
+
+.artwork-item {
+    /* Gaya untuk setiap kartu karya seni */
+    background-color: #ffffff;
+    border: 1px solid #CBCBCB;
+    border-radius: 8px;
+    overflow: hidden; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    min-height: 250px;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.artwork-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Placeholder Konten */
+.artwork-item::before {
+    content: 'Karya Seni';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    font-size: 1.5rem;
+    color: #777C6D;
+    background-color: #F8F8F8;
+}
+
+/* --- Responsive Layout untuk Grid Artwork --- */
+
+/* 1. Tablet (Max 1024px): 2 Kolom */
+@media (max-width: 1024px) {
+    .artwork-grid {
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 20px;
+    }
+}
+
+/* 2. Mobile (Max 600px): 1 Kolom */
+@media (max-width: 600px) {
+    .artwork-grid {
+        grid-template-columns: 1fr; 
+        gap: 15px;
+    }
+    .artwork-section h2 {
+        font-size: 32px;
+    }
+}
+
+
+.article-detail-section {
+    padding: 0 40px; /* Padding di dalam content-area */
+    max-width: 900px; /* Batasi lebar agar teks mudah dibaca */
+    margin: 0 auto; /* Pusatkan konten */
+}
+
+/* Header Detail */
+.article-detail-header {
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #E6E7E0; /* Garis pemisah halus */
+}
+
+.article-detail-header h1 {
+    font-size: 3.2rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.article-date {
+    font-size: 0.9rem;
+    color: #888;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.article-body {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #444;
+}
+
+/* Styling untuk Summary (yang Anda render di detail) */
+.article-body .article-summary-detail {
+    font-size: 1.3rem;
+    font-style: italic;
+    color: #777C6D; /* Warna tema Anda */
+    padding: 15px 0;
+    border-left: 3px solid #B7B89F;
+    padding-left: 20px;
+    margin-bottom: 30px;
+}
+
+.article-body p {
+    margin-bottom: 25px;
+}
+
+/* Styling untuk Tags (gunakan gaya yang sudah ada dari ArticlesPage) */
+.article-detail-header .article-tags {
+    margin-top: 10px;
+}
+
+/* Link Kembali */
+.back-link {
+    display: inline-block;
+    margin-top: 40px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #777C6D;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.back-link:hover {
+    color: #B7B89F;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 700px) {
+    .article-detail-section {
+        padding: 0 5px;
+    }
+    .article-detail-header h1 {
+        font-size: 2rem;
+    }
+    .article-body {
+        font-size: 1rem;
+    }
+}

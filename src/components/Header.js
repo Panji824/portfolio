@@ -3,7 +3,7 @@ import React from 'react';
 
 // Komponen menerima props: currentPage (state saat ini) dan handlePageChange (fungsi pengubah state)
 const Header = ({ currentPage, handlePageChange }) => {
-  const navItems = ["About", "Resume", "Portfolio","Certifications", "Contact"];
+  const navItems = ["About",, "Articles", "Resume", "Portfolio","Certifications", "Contact"];
   const socialLinks = [
     { name: "GitHub", url: "https://github.com/Panji824", iconClass: "fab fa-github" },
     { name: "LinkedIn", url: "https://linkedin.com/in/panji-wirya-pastika", iconClass: "fab fa-linkedin" },
